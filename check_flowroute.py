@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-def scrapeNumbers():
+def scrape_numbers():
     browser = webdriver.Firefox()
     browser.get('http://www.flowroute.com')
     
@@ -53,7 +53,7 @@ def scrapeNumbers():
     return result
 
 if __name__ == "__main__":
-    for element in scrapeNumbers():
+    for element in scrape_numbers():
         print element['did'][1:], element['didSetup'].replace('Setup Fee: ', '')
 
 
